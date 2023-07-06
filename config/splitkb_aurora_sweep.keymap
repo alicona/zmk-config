@@ -18,38 +18,58 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <2 1>;
             bindings = <&kp ESC>;
         };
 
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp TAB>;
+        function_layer {
+            bindings = <&tog 4>;
+            key-positions = <30 33>;
         };
 
-        combo_ralt {
-            timeout-ms = <50>;
-            key-positions = <17 16>;
-            bindings = <&kp RALT>;
+        number_layer {
+            bindings = <&tog 3>;
+            key-positions = <31 32>;
         };
 
-        combo_lalt {
-            timeout-ms = <50>;
+        left_shift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <13 12>;
+        };
+
+        right_shift {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <16 17>;
+        };
+
+        left_control {
+            bindings = <&kp LEFT_CONTROL>;
             key-positions = <11 12>;
-            bindings = <&kp LALT>;
         };
 
-        combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LGUI>;
-        };
-
-        combo_rgui {
-            timeout-ms = <50>;
+        right_control {
+            bindings = <&kp RIGHT_CONTROL>;
             key-positions = <17 18>;
-            bindings = <&kp RGUI>;
+        };
+
+        left_win {
+            bindings = <&kp LEFT_WIN>;
+            key-positions = <10 11>;
+        };
+
+        right_win {
+            bindings = <&kp RIGHT_WIN>;
+            key-positions = <18 19>;
+        };
+
+        left_alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <3 2>;
+        };
+
+        right_alt {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <6 7>;
         };
     };
 
