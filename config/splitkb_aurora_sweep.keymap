@@ -12,18 +12,22 @@
     // tapping_term_ms = <200>;
 };
 
-&adc {
-	status = "okay";
-};
+/*
+* &adc {
+* 	status = "okay";
+* };
+*/
+
 / {
-    chosen {
-	zmk,battery = &vbatt;
-    };
-    vbatt: vbatt {
-	compatible = "zmk,battery-voltage-divider";
-	io-channels = <&adc 2>;
-	output-ohms = <2000000>;
-    };
+/*    chosen {
+*	zmk,battery = &vbatt;
+*    };
+*    vbatt: vbatt {
+*	compatible = "zmk,battery-voltage-divider";
+*	io-channels = <&adc 2>;
+*	output-ohms = <2000000>;
+*    };
+*/
     combos {
         compatible = "zmk,combos";
 
