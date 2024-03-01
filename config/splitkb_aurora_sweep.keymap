@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 &mt {
@@ -43,31 +44,6 @@
             key-positions = <30 33>;
         };
 
-        symbols_layer {
-            bindings = <&tog 2>;
-            key-positions = <31 32>;
-        };
-
-        left_shift {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <13 12>;
-        };
-
-        right_shift {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <16 17>;
-        };
-
-        left_control {
-            bindings = <&kp LEFT_CONTROL>;
-            key-positions = <11 12>;
-        };
-
-        right_control {
-            bindings = <&kp RIGHT_CONTROL>;
-            key-positions = <17 18>;
-        };
-
         left_win {
             bindings = <&kp LEFT_WIN>;
             key-positions = <10 11>;
@@ -78,39 +54,14 @@
             key-positions = <18 19>;
         };
 
-        left_alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <3 2>;
-        };
-
-        right_alt {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <6 7>;
-        };
-
-        colemak_layer {
+        bluetooth_layer {
             bindings = <&tog 5>;
-            key-positions = <30 31 32 33>;
+            key-positions = <30 32>;
         };
 
-        ys_layer {
-            bindings = <&tog 6>;
-            key-positions = <32 33>;
-        };
-    };
-
-    macros {
-        kill_ys: kill_ys {
-            compatible = "zmk,behavior-macro";
-            label = "KILL_YS";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LC(F12))>;
-        };
-        open_ys: open_ys {
-            compatible = "zmk,behavior-macro";
-            label = "OPEN_YS";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LC(F11))>;
+        number_layer {
+            bindings = <&tog 3>;
+            key-positions = <31 33>;
         };
     };
 
@@ -119,64 +70,55 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W               &kp E             &kp R             &kp T        &kp Y              &kp U                &kp I    &kp O          &kp P
-&kp A  &kp S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F             &kp G        &kp H  &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K    &kp L  &kp SEMICOLON
-&kp Z  &kp X               &kp C             &kp V             &kp B        &kp N              &kp M            &kp COMMA  &kp DOT      &kp SLASH
-                                             &mo 1  &kp LS(LEFT_GUI)    &kp SPACE             &tog 3
+&kp Q  &kp W  &kp E               &kp R             &kp T             &kp Y      &kp U              &kp I                &kp O    &kp P
+&kp A  &kp S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G             &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &kp L    &kp SEMICOLON
+&kp Z  &kp X  &kp C               &kp V             &kp B             &kp N      &kp M              &kp COMMA            &kp DOT  &kp SLASH
+                                  &mo 1             &kp LEFT_SHIFT    &kp SPACE  &tog 2
             >;
         };
 
         Extend_Layer {
             bindings = <
-  &kp ESCAPE    &kp K_BACK      &kp K_FIND     &kp K_FORWARD     &kp INSERT        &kp PG_UP       &kp HOME  &kp DELETE     &kp END     &kp CAPSLOCK
-&sk LEFT_ALT  &sk LEFT_WIN  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk RIGHT_ALT    &kp PAGE_DOWN       &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT
-   &kp LC(Z)     &kp LC(X)       &kp LC(C)      &kp LEFT_WIN      &kp LC(V)        &kp ENTER  &kp BACKSPACE     &kp TAB  &kp C_MENU  &kp PRINTSCREEN
-                                                       &none         &trans        &kp ENTER          &none
+&kp ESCAPE    &kp K_BACK    &kp K_FIND      &kp K_FORWARD     &kp INSERT       &kp PG_UP      &kp HOME       &kp DELETE  &kp END     &kp CAPSLOCK
+&sk LEFT_ALT  &sk LEFT_WIN  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk RIGHT_ALT    &kp PAGE_DOWN  &kp LEFT       &kp DOWN    &kp UP      &kp RIGHT
+&kp LC(Z)     &kp LC(X)     &kp LC(C)       &kp LEFT_WIN      &kp LC(V)        &kp ENTER      &kp BACKSPACE  &kp TAB     &kp C_MENU  &kp PRINTSCREEN
+                                            &none             &trans           &kp ENTER      &none
             >;
         };
 
         Symbols_Layer {
             bindings = <
-&kp EXCLAMATION        &kp AT        &kp HASH          &kp DLLR    &kp PERCENT       &kp EQUAL       &kp SINGLE_QUOTE        &kp COLON      &kp SEMICOLON        &kp PLUS
-   &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp LEFT_CONTROL      &kp CARET    &kp ASTERISK   &kp LEFT_PARENTHESIS         &kp LBRC   &kp LEFT_BRACKET       &kp MINUS
-          &none         &none   &kp BACKSLASH          &kp PIPE  &kp AMPERSAND       &kp TILDE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
-                                                          &none          &none           &none                  &none
+&kp EXCLAMATION  &kp AT        &kp HASH        &kp DLLR          &kp PERCENT      &kp EQUAL     &kp SINGLE_QUOTE       &kp COLON        &kp SEMICOLON      &kp PLUS
+&kp LEFT_ALT     &kp LEFT_WIN  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp CARET        &kp ASTERISK  &kp LEFT_PARENTHESIS   &kp LBRC         &kp LEFT_BRACKET   &kp MINUS
+&none            &none         &kp BACKSLASH   &kp PIPE          &kp AMPERSAND    &kp TILDE     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE
+                                               &none             &none            &none         &none
             >;
         };
 
         Numbers_Layer {
             bindings = <
-   &none         &none           &none      &none  &kp KP_NUMLOCK       &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp LS(PLUS)
-&kp LALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp LCTRL        &kp RALT    &kp LS(STAR)  &kp N4  &kp N5  &kp N6     &kp MINUS
-   &none    &kp C_MENU         &kp TAB   &kp BSPC         &kp RET          &kp N0  &kp N1  &kp N2  &kp N3      &kp FSLH
-                                            &none           &none           &none   &none
+&none     &none         &none           &none      &kp KP_NUMLOCK    &kp EQUAL     &kp N7  &kp N8  &kp N9  &kp PLUS
+&kp LALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp LCTRL  &kp RALT          &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp MINUS
+&none     &kp C_MENU    &kp TAB         &kp BSPC   &kp RET           &kp N0        &kp N1  &kp N2  &kp N3  &kp FSLH
+                                        &none      &none             &none         &none
             >;
         };
 
         Function_Layer {
             bindings = <
-&kp C_STOP   &kp C_PLAY_PAUSE      &kp C_PLAY       &kp C_NEXT  &kp C_BRIGHTNESS_INC    &kp F12  &kp F7  &kp F8  &kp F9  &kp SCROLLLOCK
-  &kp LALT       &kp LEFT_WIN  &kp LEFT_SHIFT        &kp LCTRL  &kp C_BRIGHTNESS_DEC    &kp F11  &kp F4  &kp F5  &kp F6           &none
-&kp C_MUTE  &kp C_VOLUME_DOWN   &kp LS(LC(C))  &kp C_VOLUME_UP         &kp LS(LC(V))    &kp F10  &kp F1  &kp F2  &kp F3           &none
-                                                         &none                 &none    &kp RET   &none
+&kp C_STOP  &kp C_PLAY_PAUSE   &kp C_PLAY      &kp C_NEXT       &kp C_BRIGHTNESS_INC    &kp F12  &kp F7  &kp F8  &kp F9  &kp SCROLLLOCK
+&kp LALT    &kp LEFT_WIN       &kp LEFT_SHIFT  &kp LCTRL        &kp C_BRIGHTNESS_DEC    &kp F11  &kp F4  &kp F5  &kp F6  &none
+&kp C_MUTE  &kp C_VOLUME_DOWN  &kp LS(LC(C))   &kp C_VOLUME_UP  &kp LS(LC(V))           &kp F10  &kp F1  &kp F2  &kp F3  &none
+                                               &none            &none                   &kp RET  &none
             >;
         };
 
-        colemak_layer {
+        layer_5 {
             bindings = <
-&kp Q  &kp W  &kp F   &kp P      &kp B        &kp J   &kp L      &kp U    &kp Y   &kp SQT
-&kp A  &kp R  &kp S   &kp T      &kp G        &kp M   &kp N      &kp E    &kp I     &kp O
-&kp Z  &kp X  &kp C   &kp D      &kp V        &kp K   &kp H  &kp COMMA  &kp DOT  &kp FSLH
-                     &tog 1  &kp LSHFT    &kp SPACE  &tog 2
-            >;
-        };
-
-        yieldstar {
-            bindings = <
-&trans  &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &open_ys  &kill_ys  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans    &trans  &trans
+&trans  &trans  &trans        &trans        &trans    &trans  &trans        &trans        &trans  &trans
+&trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &trans    &trans  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans
+&trans  &trans  &trans        &trans        &trans    &trans  &trans        &trans        &trans  &trans
+                              &trans        &trans    &trans  &trans
             >;
         };
     };
