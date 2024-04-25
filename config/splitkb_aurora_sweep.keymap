@@ -85,7 +85,7 @@
 
         SYM_layer {
             bindings = <
-&none             &none      &kp ASTERISK  &kp AMPERSAND    &kp BACKSLASH    &none   &none   &none   &none   &none
+&kp DELETE        &none      &kp ASTERISK  &kp AMPERSAND    &kp BACKSLASH    &none   &none   &none   &none   &none
 &kp SINGLE_QUOTE  &kp CARET  &kp PERCENT   &kp DOLLAR       &kp PLUS         &trans  &trans  &trans  &trans  &trans
 &kp GRAVE         &kp HASH   &kp AT_SIGN   &kp EXCLAMATION  &kp PIPE         &none   &none   &none   &none   &none
                                            &none            &none            &none   &none
