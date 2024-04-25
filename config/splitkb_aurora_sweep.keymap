@@ -50,7 +50,7 @@
         };
 
         combo_capslock {
-            bindings = <&kp CAPSLOCK>;
+            bindings = <&caps_word>;
             key-positions = <20 29>;
         };
 
