@@ -1,0 +1,6 @@
+![ArcoLinux_2024-04-25_19-32-04](https://github.com/alicona/zmk-config/assets/93709/8ad2841a-348a-4f54-b9cb-81a4432f5655)
+![ArcoLinux_2024-04-25_19-35-23](https://github.com/alicona/zmk-config/assets/93709/22749900-1927-44b4-b919-a7571d0d981f)
+![ArcoLinux_2024-04-25_19-36-11](https://github.com/alicona/zmk-config/assets/93709/ae456f92-8a6e-48d6-b31d-0260f0d822e4)
+![ArcoLinux_2024-04-25_19-37-28](https://github.com/alicona/zmk-config/assets/93709/99081e90-41a0-4a74-bd89-f12c7567d81f)
+![ArcoLinux_2024-04-25_19-37-59](https://github.com/alicona/zmk-config/assets/93709/e0f7c77c-c476-4834-a4c3-d58acf241a08)
+![ArcoLinux_2024-04-25_19-38-31](https://github.com/alicona/zmk-config/assets/93709/a0d8c9c4-c1f6-4419-a3db-9dab38467353)
