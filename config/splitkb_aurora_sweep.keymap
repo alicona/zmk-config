@@ -35,33 +35,28 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <2 1>;
+            key-positions = <10 19>;
             bindings = <&kp ESC>;
         };
 
-        function_layer {
-            bindings = <&mo 2>;
+        combo_underscored {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <23 26>;
+        };
+
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <3 6>;
+        };
+
+        combo_capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <20 29>;
+        };
+
+        combo_bluetooth {
+            bindings = <&mo 5>;
             key-positions = <30 33>;
-        };
-
-        left_win {
-            bindings = <&kp LEFT_WIN>;
-            key-positions = <10 11>;
-        };
-
-        right_win {
-            bindings = <&kp RIGHT_WIN>;
-            key-positions = <18 19>;
-        };
-
-        bluetooth_layer {
-            bindings = <&mo 4>;
-            key-positions = <30 32>;
-        };
-
-        number_layer {
-            bindings = <&mo 3>;
-            key-positions = <31 33>;
         };
     };
 
@@ -70,10 +65,10 @@
 
         BASE_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R    &kp T        &kp Y      &kp U          &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F    &kp G        &kp H      &kp J          &kp K      &kp L    &kp SEMICOLON
-&kp Z  &kp X  &kp C  &kp V    &kp B        &kp N      &kp M          &kp COMMA  &kp DOT  &kp SLASH
-                     &kp TAB  &kp SPACE    &kp ENTER  &kp BACKSPACE
+&kp Q  &kp W  &kp E  &kp R      &kp T          &kp Y        &kp U            &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F      &kp G          &kp H        &kp J            &kp K      &kp L    &kp SEMICOLON
+&kp Z  &kp X  &kp C  &kp V      &kp B          &kp N        &kp M            &kp COMMA  &kp DOT  &kp SLASH
+                     &lt 3 TAB  &lt 1 SPACE    &lt 2 ENTER  &lt 4 BACKSPACE
             >;
         };
 
@@ -101,6 +96,15 @@
 &trans  &trans  &trans  &trans  &trans    &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp MINUS
 &none   &none   &none   &none   &none     &kp N0        &kp N1  &kp N2  &kp N3  &kp FSLH
                         &none   &none     &none         &none
+            >;
+        };
+
+        function_layer {
+            bindings = <
+&none  &kp F12  &kp F11  &kp F10  &kp F9    &none   &none   &none   &none   &none
+&none  &kp F8   &kp F7   &kp F6   &kp F5    &trans  &trans  &trans  &trans  &trans
+&none  &kp F4   &kp F3   &kp F2   &kp F1    &none   &none   &none   &none   &none
+                         &none    &none     &none   &none
             >;
         };
 
