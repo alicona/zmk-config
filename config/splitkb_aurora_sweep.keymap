@@ -60,6 +60,11 @@
             bindings = <&mo 5>;
             key-positions = <30 33>;
         };
+
+        combo_hyper {
+            bindings = <&kp LG(LC(LEFT_ALT))>;
+            key-positions = <32 31>;
+        };
     };
 
     behaviors {
@@ -81,19 +86,19 @@
 
         BASE_layer {
             bindings = <
-&kp Q            &kp W            &kp E          &kp R         &kp T          &kp Y        &kp U                &kp I              &kp O            &kp P
-&rpi LEFT_WIN A  &rpi LEFT_ALT S  &rpi LSHIFT D  &rpi LCTRL F  &kp G          &kp H        &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_WIN SEMICOLON
-&kp Z            &kp X            &kp C          &kp V         &kp B          &kp N        &kp M                &kp COMMA          &kp DOT          &kp SLASH
-                                                 &lt 3 TAB     &lt 1 SPACE    &lt 2 ENTER  &lt 4 BACKSPACE
+&kp Q            &kp W            &kp E          &kp R         &kp T                    &kp Y                   &kp U                 &kp I               &kp O             &kp P
+&rpi LEFT_WIN A  &rpi LEFT_ALT S  &rpi LSHIFT D  &rpi LCTRL F  &rpi LG(LEFT_SHIFT) G    &rpi RG(RIGHT_SHIFT) H  &rpi RIGHT_CONTROL J  &rpi RIGHT_SHIFT K  &rpi RIGHT_ALT L  &rpi RIGHT_WIN SEMICOLON
+&kp Z            &kp X            &kp C          &kp V         &kp B                    &kp N                   &kp M                 &kp COMMA           &kp DOT           &kp SLASH
+                                                 &lt 3 TAB     &lt 1 SPACE              &lt 2 ENTER             &lt 4 BACKSPACE
             >;
         };
 
         NAV_layer {
             bindings = <
-&none  &none  &none  &none  &none    &none  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&none  &none  &none  &none  &none    &none  &kp LEFT          &kp DOWN_ARROW     &kp UP_ARROW          &kp RIGHT_ARROW
-&none  &none  &none  &none  &none    &none  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GREATER_THAN      &kp LESS_THAN
-                     &none  &none    &none  &none
+&none   &none   &none   &none   &none     &none  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans  &trans  &trans  &trans  &trans    &none  &kp LEFT          &kp DOWN_ARROW     &kp UP_ARROW          &kp RIGHT_ARROW
+&none   &none   &none   &none   &none     &none  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GREATER_THAN      &kp LESS_THAN
+                        &none   &none     &to 0  &to 6
             >;
         };
 
@@ -130,6 +135,15 @@
 &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &trans    &trans  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans
 &trans  &trans  &trans        &trans        &trans    &trans  &trans        &trans        &trans  &trans
                               &trans        &trans    &trans  &trans
+            >;
+        };
+
+        colemak_layer {
+            bindings = <
+&kp Q  &kp W  &kp F  &kp P   &kp G     &kp J   &kp L   &kp U      &kp Y    &kp SEMI
+&kp A  &kp R  &kp S  &kp T   &kp D     &kp H   &kp N   &kp E      &kp I    &kp O
+&kp Z  &kp X  &kp C  &kp V   &kp B     &kp K   &kp M   &kp COMMA  &kp DOT  &kp FSLH
+                     &trans  &trans    &trans  &trans
             >;
         };
     };
